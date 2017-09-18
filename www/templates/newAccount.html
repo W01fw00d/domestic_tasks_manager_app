@@ -1,0 +1,44 @@
+<ion-view title="New Account" id="page6" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <div class="spacer" style="width: 283px; height: 48px;"></div>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">User</span>
+                    <input type="text" placeholder="" ng-model="new_user.name">
+                </label>
+
+                <label class="item">
+                    <span >Write a password of at least 6 characters!</span>
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" ng-model="new_user.password" ng-minlength="6">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Repeat Password</span>
+                    <input type="password" placeholder="" ng-model="re_password" ng-minlength="6">
+                </label>
+
+
+                <!--
+                <label class="item item-input">
+                  <input class="wolf-checkbox" ng-model="new_user.admin" type="checkbox">
+                </label>
+              -->
+            </ion-list>
+            <!-- ui-sref="menu.myHome" --><a id="newAccount-button3"
+            class="button button-block icon-left button-balanced ion-log-in"
+            ng-disabled="!new_user.name || !new_user.password || !re_password || (new_user.password != re_password)"
+            ng-click="createAccount()"
+            >Register</a>
+
+
+        </form>
+        <div class="spacer" style="width: 283px; height: 43px;"></div>
+
+        <img id="wolf-img" class="wolf-background-img" src="img/Dindl991SI6ediTvKg4H_vault4.png" >
+
+    </ion-content>
+</ion-view>

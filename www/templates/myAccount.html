@@ -1,0 +1,38 @@
+<ion-view title="{{user.name}}'s Account" id="page13" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div class="spacer" style="width: 283px; height: 51px;"></div>
+        <form class="list" ng-submit="applyChanges()">
+
+          <!--
+            <a ui-sref="menu.manageTasks" id="myAccount-button19"  class="button-positive button button-stable  button-block">Forbidden Tasks</a>
+            <a ui-sref="menu.availableSchedule" id="myAccount-button20"  class="button-positive button button-stable  button-block">Available Schedule</a>
+          -->
+            <div class="spacer" style="width: 283px; height: 26px;"></div>
+            <div id="myAccount-markdown3" style="color:#345985;text-align:center;">
+                <p>Change
+                    <strong>Password</strong>
+                </p>
+            </div>
+            <label class="item item-input">
+                <span class="input-label">Old</span>
+                <input ng-model="data.password_old" type="password" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">New</span>
+                <input ng-model="data.password_new" type="password" placeholder="">
+            </label>
+            <label ng-hide="!user.admin" class="item item-input">
+                <span class="input-label">Server url</span>
+                <input ng-model="data.url" type="text" placeholder="">
+            </label>
+
+            <button type="submit" class="button button-balanced button-block icon-left ion-checkmark">Apply</button>
+            <div class="spacer" style="width: 283px; height: 50px;"></div>
+            <button ng-hide="!user.admin" ng-click="showConfirm()" class="button button-assertive button-block icon-left ion-nuclear">Clear all data</button>
+
+        </form>
+
+        <img id="wolf-img" class="wolf-background-img" src="img/ZE8IG4eR0yuCikF8zx8s_vault4.png" >
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,95 @@
+<ion-view title="Available Schedule" id="page8" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+
+        <div>
+            <table style="width:100%">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>Morning</td>
+                        <td>Afternoon</td>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[0]['morning']" type="checkbox">
+                            <b></b>
+                        </td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[0]['afternoon']" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[1]['morning']" type="checkbox">
+                            <b></b>
+                        </td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[1]['afternoon']" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[2]['morning']" type="checkbox">
+                            <b></b>
+                        </td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[2]['afternoon']" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[3]['morning']" type="checkbox">
+                            <b></b>
+                        </td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[3]['afternoon']" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[4]['morning']" type="checkbox">
+                            <b></b>
+                        </td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[4]['afternoon']" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[5]['morning']" type="checkbox">
+                            <b></b>
+                        </td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[5]['afternoon']" type="checkbox">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[6]['morning']" type="checkbox">
+                            <b></b>
+                        </td>
+                        <td>
+                            <input class="wolf-checkbox" ng-model="available_schedule[6]['afternoon']" type="checkbox">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ion-list></ion-list>
+
+        <button ng-click="check_all()" class="button button-positive button-block icon-left ion-wand">Check all</button>
+
+        <button ng-click="applyChanges()" id="availableSchedule-button22" class="button button-balanced button-block icon-left ion-checkmark-round">Apply changes</button>
+
+
+        <img id="wolf-img" class="wolf-background-img" src="img/5ELc4dBySpmfzq72rqge_36_Ambassador_of_Peace.png" >
+
+    </ion-content>
+</ion-view>

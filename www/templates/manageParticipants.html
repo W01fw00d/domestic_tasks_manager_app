@@ -1,0 +1,31 @@
+<ion-view title="Chosen Participants" id="page9" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+
+      <form class="list">
+          <label class="item item-select">
+              <span class="input-label">Participants List</span>
+                <select ng-model="participants_select.index" ng-options="participants.indexOf(participant) as participant.name for participant in participants "></select>
+          </label>
+
+          <button ng-disabled="participants.length == 0" ng-click="addChosenParticipant()" id="manageParticipants-button11" class="button button-positive button-block icon-left ion-android-add">Add</button>
+      </form>
+
+        <ion-list ng-repeat="chosen_participant in chosen_participants track by $index">
+
+            <ion-item class="item-thumbnail-left">
+                <img src="img/nvuHaNQCRnaUr52NBoIg_woman1.png">
+                <h2 ng-bind="chosen_participant.name" style="padding: 6px 0;font-weight: bold;"></h2>
+                <h2 ng-hide="user.participant != chosen_participant.id" style="font-style: italic;">App User</h2>
+                <ion-option-button ng-click="editParticipant(chosen_participant)" class="button-energized icon ion-edit"></ion-option-button>
+                <ion-option-button  ng-click="removeChosenParticipant(chosen_participant)" class="button-assertive icon ion-arrow-up-c"></ion-option-button>
+                <!--ng-hide="user.participant === chosen_participant.id"-->
+            </ion-item>
+
+        </ion-list>
+
+
+
+        <img id="wolf-img" class="wolf-background-img" src="img/ZLfPFauS0e3YDIAyCSOg_vault3.png" >
+
+    </ion-content>
+</ion-view>

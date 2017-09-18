@@ -1,0 +1,117 @@
+<ion-view title="Tasks Calendar" id="page8" style="background-color:#345985;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+
+        <div>
+            <table class="wolf-calendar-table" style="width:100%">
+                <tbody>
+                    <tr>
+                        <td class="wolf-calendar-empty"></td>
+                        <td class="wolf-calendar-titles">Morning</td>
+                        <td class="wolf-calendar-titles"><strong>Afternoon</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="wolf-calendar-titles">Monday</td>
+                        <td >
+                          <div ng-repeat="day_tasks in tasks_calendar[0]['morning']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[0]['afternoon']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wolf-calendar-titles">Tuesday</td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[1]['morning']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[1]['afternoon']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wolf-calendar-titles">Wednesday</td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[2]['morning']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[2]['afternoon']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wolf-calendar-titles">Thursday</td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[3]['morning']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[3]['afternoon']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wolf-calendar-titles">Friday</td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[4]['morning']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[4]['afternoon']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wolf-calendar-titles">Saturday</td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[5]['morning']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[5]['afternoon']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wolf-calendar-titles">Sunday</td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[6]['morning']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                        <td>
+                          <div ng-repeat="day_tasks in tasks_calendar[6]['afternoon']">
+                            <strong>{{day_tasks.name}}: </strong>{{day_tasks.assigned_tasks}}
+                          </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="spacer" style="width: 283px; height: 45px;"></div>
+
+        <h3> Difficulty Points </h3>
+        <div ng-repeat="participant in participants">
+          <strong>{{participant.name}}: </strong>{{participant.dif_points}}
+        </div>
+
+        <!--<img class="wolf-background-img" src="img/5ELc4dBySpmfzq72rqge_36_Ambassador_of_Peace.png" >-->
+
+    </ion-content>
+</ion-view>

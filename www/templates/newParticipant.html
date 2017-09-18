@@ -1,0 +1,21 @@
+<ion-view title={{view_title}} id="page11" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div class="spacer" style="width: 283px; height: 51px;"></div>
+
+        <form class="list" ng-submit="createParticipant()">
+            <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input ng-model="participant.name" type="text" placeholder="">
+            </label>
+            <a ng-click="goToTasks()" ng-disabled="!participant.name" id="newParticipant-button13" class="button-positive button button-stable button-block icon-left ion-heart-broken">Forbidden Tasks</a>
+            <a ng-click="goToSchedule()" ng-disabled="!participant.name" id="newParticipant-button14" class="button-positive button button-stable button-block icon-left ion-calendar">Available Schedule</a>
+            <div class="spacer" style="width: 283px; height: 50px;"></div>
+
+            <button ng-hide="appMode == 'participantEdit'" ng-disabled="!participant.name" type="submit" class="button button-balanced button-block icon-left ion-plus">Register</button>
+            <button ng-hide="appMode != 'participantEdit'" ng-disabled="!participant.name" type="submit" class="button button-energized button-block icon-left ion-edit">Edit</button>
+        </form>
+
+        <img id="wolf-img" class="wolf-background-img" src="img/ZLfPFauS0e3YDIAyCSOg_vault3.png" >
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view title="Login" id="page5" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <div class="spacer" style="width: 283px; height: 39px;"></div>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">User</span>
+                    <input type="text" placeholder="" ng-model="user.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" ng-model="user.password">
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label">Server url</span>
+                    <input ng-model="data.url" type="text" placeholder="">
+                </label>
+
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <!-- ui-sref="menu.myHome" --><a  id="login-button1" style="color:#FFFFFF;"
+            class="button button-balanced  button-block icon-left ion-log-in"
+            ng-disabled="!user.name || !user.password" ng-click="login()" >Log in</a>
+            <div class="spacer" style="width: 283px; height: 50px;"></div>
+            <a ui-sref="newAccount" id="login-button2" class="button button-positive button-block icon-left ion-plus">Create a new account</a>
+        </form>
+
+        <img id="wolf-img" class="wolf-background-img" src="img/5ELc4dBySpmfzq72rqge_36_Ambassador_of_Peace.png">
+        <!-- optional class for hidden when softkeyboard shows :  hide-on-keyboard-open -->
+    </ion-content>
+
+</ion-view>

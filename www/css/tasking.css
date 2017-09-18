@@ -1,0 +1,61 @@
+.wolf-checkbox{
+
+  width: 30px;
+  height: 30px;
+  /*margin: 5px !important;*/
+}
+
+table {
+
+  text-align: center;
+
+}
+
+ion-item, button, .button, label.item{
+
+  opacity: 0.98;
+}
+
+
+.wolf-calendar-empty{
+
+  background-color: #345985 !important;
+}
+
+.wolf-calendar-table td{
+
+  background-color: #fbe7a8;
+  border: 3px solid #345985;
+}
+
+.wolf-calendar-titles{
+
+  color: #ffffff;
+  background-color: #477bb7 !important;
+  font-weight: bold;
+}
+
+
+td, td p{
+
+  vertical-align: middle;
+  padding: 5px;
+  margin: 0px;
+}
+
+
+.wolf-background-img{
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  z-index: -1;
+  width: 70%;
+  height: auto;
+  /*text-align:right;*/
+}
+
+.wolf-hide{
+  display: none;
+}

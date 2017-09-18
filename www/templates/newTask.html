@@ -1,0 +1,51 @@
+<ion-view title={{view_title}} id="page12" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div class="spacer" style="width: 283px; height: 51px;"></div>
+
+        <form class="list" ng-submit="createTask()">
+            <label class="item item-input">
+                <span class="input-label">Name</span>
+                <input ng-model="task.name" type="text" placeholder="">
+            </label>
+            <label class="item item-select">
+                <span class="input-label">Frequency</span>
+
+                <select ng-options="frequency as frequency.name for frequency in frequencies track by frequency.name"
+                        ng-model="default_selected.selectedFrequency"
+                        ng-disabled="!default_selected.isPresent"
+                        >
+                        <!--ng-change="countAll()"-->
+
+                </select>
+
+            </label>
+
+            <!--
+            <label class="item">
+              <div>
+              <a href="javascript:" ng-repeat="d in difficulty_array"
+                class="padding" style="text-decoration:none;">
+                <i class="icon {{d.icon}}" ng-click="setDifficulty(d.value)">
+                </i>
+              </a>
+            </div>
+            </label>
+            -->
+
+            <ion-item class="range range-positive">Difficulty
+                <input id="range-input" ng-change="update_range_text()" ng-model="task.difficulty" type="range" value="1" default="5" min="1" max="9"/>
+                <p>{{task.difficulty}}</p>
+            </ion-item>
+
+
+            <div class="spacer" style="width: 283px; height: 50px;"></div>
+
+            <button ng-hide="appMode == 'taskDraft'" ng-disabled="!task.name" type="submit"  class="button button-balanced button-block icon-left ion-plus">Register</button>
+            <button ng-hide="appMode != 'taskDraft'" ng-disabled="!task.name" type="submit"  class="button button-energized button-block icon-left ion-edit">Edit</button>
+
+
+        </form>
+
+        <img id="wolf-img" class="wolf-background-img" src="img/U2eIDCIORPWrJkGdNKFg_vault8.png">
+    </ion-content>
+</ion-view>

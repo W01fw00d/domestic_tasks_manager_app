@@ -1,0 +1,12 @@
+{
+  "name": "tasking",
+  "app_id": "4895499a",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

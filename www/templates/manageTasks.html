@@ -1,0 +1,38 @@
+<ion-view title={{view_title}} id="page10" style="background-color:#FBE7A8;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+
+      <form class="list">
+          <label class="item item-select">
+              <span class="input-label">Tasks List</span>
+
+                <select ng-model="tasks_select.index" ng-options="tasks.indexOf(task) as task.name for task in tasks"></select>
+          </label>
+
+          <button ng-disabled="tasks.length == 0" ng-click="addChosenTask()" id="manageTasks-button12" class="button button-positive button-block icon-left ion-android-add">Add</button>
+      </form>
+
+        <ion-list ng-repeat="chosen_task in chosen_tasks track by $index">
+
+            <ion-item class="item-thumbnail-left">
+                <img src="img/s1pQS8saRpaqgZ0KH5bg_sweep.jpg">
+                <h2 ng-bind="chosen_task.name" style="padding: 6px 0;font-weight: bold;"></h2>
+                <p>Difficulty: <span ng-bind="chosen_task.difficulty"></span></p>
+                <p>Frequency: <span ng-bind="chosen_task.frequency"></span></p>
+                <ion-option-button ng-click="editTask(chosen_task)" ng-hide=isParticipantDraft  class="button-energized icon ion-edit"></ion-option-button>
+                <ion-option-button ng-click="removeChosenTask(chosen_task)" class="button-assertive icon ion-arrow-up-c"></ion-option-button>
+            </ion-item>
+
+        </ion-list>
+
+
+
+        <div class="spacer" style="width: 283px; height: 24px;"></div>
+
+        <button ng-hide=!isParticipantDraft ng-disabled="tasks.length == 0" ng-click="applyChanges()" class="button button-balanced button-block icon-left ion-checkmark-round">Apply changes</button>
+
+
+
+        <img id="wolf-img" class="wolf-background-img" src="img/U2eIDCIORPWrJkGdNKFg_vault8.png" >
+
+    </ion-content>
+</ion-view>
